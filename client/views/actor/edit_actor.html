@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <a href="#/movies"><span class="glyphicon glyphicon-backward"></span>Go Back</a>
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">Edit Actor</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form ng-submit="updateActor()" ng-init="getActor()" name="editForm">
+                            <div class="form-group" >
+                                <label>Name</label>
+                                <input type="text" class="form-control" ng-model="actor.name" placeholder="Name" ng-required="true" name="name" >
+                                <div ng-show="editForm.name.$touched && editForm.name.$invalid">
+                                  <small style="color: red;display: block;text-align: center;">Please Enter Name</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select ng-model="actor.sex" class="form-control" ng-required="true" name="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <div ng-show="editForm.gender.$touched && editForm.gender.$invalid">
+                                    <small style="color: red;display: block;text-align: center;">Please Choose Gender</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPhone" >Phone</label>
+                                <input type="number" class="form-control" ng-model="actor.phone" placeholder="MobileNo." ng-minlength="10" ng-maxlength="10" ng-required="true" name="phone">
+                                <span class="help-block" ng-show="editForm.phone.$error.required || editForm.phone.$error.number">
+                                    Valid phone number is required
+                                </span>
+                                <span class="help-block" ng-show="((editForm.phone.$error.minlength ||editForm.phone.$error.maxlength) && editForm.phone.$dirty) ">
+                                    phone number should be 10 digits
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>DOB</label>
+                                <input type="date" class="form-control" ng-model="actor.dob" placeholder="DOB" ng-required="true" name="dob">
+                                <div ng-show="editForm.dob.$touched && editForm.dob.$invalid">
+                                  <small style="color: red;display: block;text-align: center;">Please Enter DOB</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Bio</label>
+                                <textarea class="form-control" ng-model="actor.bio" placeholder="bio" ng-required="true" name="bio"></textarea>
+                                <div ng-show="editForm.bio.$touched && editForm.bio.$invalid">
+                                  <small style="color: red;display: block;text-align: center;">Please Enter Bio</small>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

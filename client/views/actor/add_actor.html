@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <a href="#/movies"><span class="glyphicon glyphicon-backward"></span>Go Back</a>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <b class="panel-title"><center>Add Actor</center> </b>
+            </div>
+            <div class="panel-body">
+                <form ng-submit="addActor()" name="addForm">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" ng-model="actor.name" placeholder="Name" name="name" ng-required="true">
+                        <div ng-show="addForm.name.$touched && addForm.name.$invalid" style="margin-top: 5px">
+                            <div class="alert alert-danger">
+                                <center><small>Please Enter Name</small></center> 
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select ng-model="actor.sex" class="form-control" ng-required="true" name="sex">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <div ng-show="addForm.sex.$touched && addForm.sex.$invalid" style="margin-top: 5px">
+                            <div class="alert alert-danger">
+                                <center><small>Please Choose Gender</small></center> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>DOB</label>
+                        <input type="date" class="form-control" ng-model="actor.dob" placeholder="Date Of Birth" ng-required="true" name="dob">
+                        <div ng-show="addForm.dob.$touched && addForm.dob.$invalid" style="margin-top: 5px">
+                            <div class="alert alert-danger">
+                                <center><small>Please Enter DOB</small></center> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhone" >Phone</label>
+                        <input type="number" class="form-control" ng-model="actor.phone" placeholder="MobileNo." ng-minlength="10" ng-maxlength="10" ng-required="true" name="phone">
+                        <span class="help-block" ng-show="addForm.phone.$error.required || addForm.phone.$error.number">Valid phone number is required</span>
+                        <span class="help-block" ng-show="((addForm.phone.$error.minlength ||addForm.phone.$error.maxlength) && addForm.phone.$dirty)">phone number should be 10 digits
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label>Tell Us About Yourself</label>
+                        <textarea class="form-control" ng-model="actor.bio" placeholder="Tell us about you..." ng-requiiored="true" name="bio"></textarea>
+                        <div ng-show="addForm.bio.$touched && addForm.bio.$invalid" style="margin-top: 5px">
+                            <div class="alert alert-danger">
+                                <center><small>Please Enter About Yourself</small></center> 
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-location-arrow" aria-hidden="true"></i> Add Actor</button> 
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>

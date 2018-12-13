@@ -1,0 +1,136 @@
+<html >
+<head>
+    <title>Actors DataBase</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="myApp"> 
+    <nav class="navbar  navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-md-3 hidden-xs hidden-sm" style="padding-right:  0px">
+                                   <img src="http://cdn.collider.com/wp-content/uploads/captain-america-the-first-avenger-wallpaper.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                                <div class="col-md-3 hidden-xs hidden-sm" style="padding-left: 0px;padding-right: 0px">
+                                   <img src="http://cdn.collider.com/wp-content/uploads/thor-wallpaper.jpg" alt="Los Angeles" style="width:100%;height: 150px">
+                                </div>
+                                <div class="col-md-3 hidden-xs hidden-sm" style="padding-right:  0px;padding-left: 0px">
+                                   <img src="https://staticr1.blastingcdn.com/media/photogallery/2016/1/29/660x290/b_620x273/marvel-presenta-nuevas-imagenes-de-civil-war_582111.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                                <div class="col-md-3 visible-xs visible-sm visible-md visible-lg" style="padding-left:  0px">
+                                   <img src="https://images7.alphacoders.com/874/thumb-1920-874043.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="item">
+                            <div class="row ">
+                                <div class="col-md-3  hidden-xs hidden-sm" style="padding-right:  0px">
+                                   <img src="http://images2.fanpop.com/image/photos/9400000/Batman-and-Dent-the-dark-knight-9437000-1261-762.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                                <div class="col-md-3  hidden-xs hidden-sm" style="padding-left: 0px;padding-right: 0px">
+                                   <img src="https://wallpapercave.com/wp/8Fy3OaI.jpg" style="width:100%;height: 150px">
+                                </div>
+                                <div class="col-md-3  hidden-xs hidden-sm" style="padding-right:  0px;padding-left: 0px">
+                                   <img src="http://images6.fanpop.com/image/photos/34700000/man-of-steel-wallpapers-man-of-steel-34785681-1024-768.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                                <div class="col-md-3  visible-xs visible-sm visible-md visible-lg" style="padding-left:  0px">
+                                   <img src="https://i.imgur.com/RWgDsBx.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                            </div> 
+                        </div>
+    
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-3 hidden-xs hidden-sm" style="padding-right:  0px">
+                                   <img src="http://images5.fanpop.com/image/photos/29600000/john-carter-wallpapers-john-carter-movie-2012-29693440-1920-1200.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                                <div class="col-md-3 hidden-xs hidden-sm" style="padding-left: 0px;padding-right: 0px">
+                                   <img src="https://wallpapers.filmibeat.com/ph-1024x768/2013/03/g-i-joe-retaliation_1364288172.jpg" style="width:100%;height: 150px">
+                                </div>
+                                <div class="col-md-3 visible-xs visible-sm visible-md visible-lg" style="padding-right:  0px;padding-left: 0px">
+                                   <img src="https://wallpapersite.com/images/wallpapers/2-0-4960x2735-shankar-robo-2-akshay-kumar-rajinikanth-2018-4k-11796.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                                <div class="col-md-3 hidden-xs hidden-sm" style="padding-left:  0px">
+                                   <img src="http://www.boxofficemovies.in/now/wp-content/uploads/2014/01/Akshay-Kumar-Holiday-Movie-Poster-by-a-ArabFan.jpg" alt="Los Angeles" style="width:100%;height: 150px"> 
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="wrapper" >
+    <!-- Sidebar Holder -->
+        <nav id="sidebar" style="background-color: #343E54">
+            <ul class="list-unstyled components" style="margin-top: 10px">
+                <li class="active"><a href="#movies" data-toggle="pill"><i class="fa fa-film" aria-hidden="true"></i> Movies</a></li>
+                <li><a href="#/movies/add"><i class="fa fa-file-video-o" aria-hidden="true"></i> Add Movie</a></li>
+                <li><a href="#/actors/add"><i class="fa fa-user-plus" aria-hidden="true"></i> Add Actor</a></li>
+                <li><a href="#/producers/add"><i class="fa fa-user-plus" aria-hidden="true"></i> Add Producer</a></li>
+                <li><a href="#/actors/"><i class="fa fa-users" aria-hidden="true"></i> Actors</a></li>
+                <li><a href="#/producers/"><i class="fa fa-address-card-o" aria-hidden="true"></i> Producers</a></li>
+            </ul>     
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content" style="background-color: #E5E8E8    ">
+            <button type="button" id="sidebarCollapse" style="position: fixed;margin-left: -18px;margin-top: 15px" >
+                <div class="contain" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>        
+            </button> 
+              <div style="margin-top: 50px"> <div  ng-view></div></div> 
+           
+        </div>
+    </div>
+
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>  
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script> 
+    <script src="/app.js"></script>
+    <script src="/controllers/actors.js"></script>
+    <script src="/controllers/producers.js"></script>
+    <script src="/controllers/movies.js"></script>
+    <script src="/js/an.js"></script> 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    
+</body>
+</html>

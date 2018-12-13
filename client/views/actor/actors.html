@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 col-sm-12 ">
+            <div class="input-group input-group-md searchname" >
+                <input type="text" class="form-control" placeholder="Search Actor" ng-model="search" >
+                <div class="input-group-btn">
+                    <button class="btn btn-default" style="height: 34px" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-primary" ng-init="getActors()" style="margin-top: 50px">
+    <div class="panel-heading">
+        <b class="panel-title"><center>Detail Of Actors</center> </b>
+    </div>
+    <div class="container-fluid">
+        <div class="panel-body">
+            <div class="row">
+                <div ng-repeat="actor in actors| filter:search">
+                  	<div class="col-md-6 col-sm-6 col-xs-12">
+                    		<div class="col-md-6 col-sm-6 col-xs-12" >
+                      			<h4 >{{actor.name}}</h4>
+                      			<p>{{actor.bio}}</p>
+                      			<a class="btn btn-primary" href="#/actors/details/{{actor._id}}">View Details</a>
+                    		</div>
+                    		<div class="col-md-6 col-sm-6 col-xs-12" >
+                            <img class="thumbnail" src="{{actor.image_url}}" style="background-color: maroon">
+                        </div>
+                  	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 

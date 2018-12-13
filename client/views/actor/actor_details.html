@@ -1,0 +1,23 @@
+<a href="#/movies"><span class="glyphicon glyphicon-backward"></span>Go Back</a>
+<div class="panel panel-primary" ng-init="getActor()">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3 col-sm-6" style="background-color: maroon">
+                <img src="{{actor.image_url}}" class="img-responsive">
+            </div>
+            <div class="col-md-8 col-sm-6">
+                </p>{{actor.bio}}</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Name : {{actor.name}}</li>
+                    <li class="list-group-item">Gender : {{actor.sex}}</li>
+                    <li class="list-group-item">DOB : {{actor.dob}}</li>
+                    <li class="list-group-item">Mobile No. : {{actor.phone}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pull-right">
+            <a href="#/actors/edit/{{actor._id}}" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+            <a href="#" ng-click="removeActor(actor._id)" class="btn btn-danger"> <i class="fa fa-trash" aria-hidden="true"></i>Delete</a>
+        </div>
+    </div>
+</div>
