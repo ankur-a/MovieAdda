@@ -53,7 +53,14 @@
 
                 <div class="form-group autocomplete">
                     <label>Enter Producer</label>
-                    <input class="form-control" id="myInput" ng-model="movie.producername" type="text" name="producer" placeholder="Enter producer name" ng-required="true">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <input class="form-control" id="myInput" ng-model="movie.producername" type="text" name="producer" placeholder="Enter producer name" ng-required="true">
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <a href="#/producers" class="btn btn-info"><i class="fa fa-users" aria-hidden="true"></i> Availabe Producers</a>
+                        </div>
+                    </div>
                     <div ng-show="addForm.producername.$touched && addForm.producername.$invalid" style="margin-top: 5px">
                         <div class="alert alert-danger">
                             <center><small>Please Enter Producer</small></center> 
@@ -92,7 +99,7 @@
                 </div>
             
                 <div class="form-group">
-                    <label>Actor Name</label>
+                    <label>Actor Name <a href="#/actors" class="btn btn-info"><i class="fa fa-users" aria-hidden="true"></i> Availabe Actors</a></label>
                     <div  ng-repeat="column in columns">
                         <input class="form-control" id="myActor" ng-model="movie.member[$index]" type="text"  placeholder="Enter Actor name" ng-required="true">
                         <br>
@@ -109,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary";"><i class="fa fa-film" aria-hidden="true"></i> Add Movie</button> 
+                <center><button type="submit" class="btn btn-primary"><i class="fa fa-film" aria-hidden="true"></i> Add Movie</button> </center> 
             </form>
 
         </div>
