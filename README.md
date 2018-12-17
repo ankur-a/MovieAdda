@@ -1,57 +1,48 @@
-## Patients Detail ##
+## Movie Adda ##
 
-**Patients Detail** is a simple web application which includes and Express RESTful API server and a front end in AngularJS
+**Movie Adda** 
+It is an online database of information related to films, television programs, and home videos, and internet streams, including cast, production crew, and plot summaries.
+
 ## Technology Used ##
 Front-End: AngularJs, BootStrap.
 Back-End: NodeJs, Express, MongoDB.
 ## Usage ##
-We can manage the record of patients.
 
+We have three user                                                                                                          
 
-
- ### Installation for MongoDB ### 
-#### Download MongoDB https://www.mongodb.com/download-center?jmp=nav#community ####
-#### Installation Guide for windows:https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-windows/ ####
-#### Installation Guide for mac:https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-os-x/ ####
-#### Installation Guide for Linux:https://docs.mongodb.com/v3.0/administration/install-on-linux/ ####
-#### or go through this link https://www.youtube.com/watch?v=pWbMrx5rVBE&t=529s ####
-
-Check whether mongodb has been installed or not open your comd in administrative mode and run 
-
-```sh
-$ net start MongoDB
-```
+     1. Actros
+     2. Producers
+     3. Movies
+     
+   #
+    
+                                                   # Basic Functionality
+                                                      
+  1. At home page a user can see all the movies and their information. User can also see all the producers and actors
+     and he can add, delete and edit actors, producers or movies information.
+    
+  2. If a user add actrors in movie which are not in our database mean a actor does'n exist with that name,so 
+     user will get a message to add this actor in Actor Database.
+     
+  3. If a user add producer in movie which is not in our Producers database means a producer does'n exist with 
+     that name,so user will get a message to add this producer in Producer Database.
+  
+  4. If both actors and producer exist in database only then user can add movie with these actros and producer. 
+     
+  #
+  
 ### change localhost to mLab MongoDB databse
-replace mongodb://localhost/patients' with mongodb://username:password@ds251747.mlab.com:51747/patient
+replace mongodb://localhost/patients' with mongodb://username:password@ds251747.mlab.com:51747/database_name
 ### Installation required for app
+
 ```sh
 $ npm install
 ```
 
 ```sh
-$ npm install express
-```
-
-```sh
-$ npm install angular
-```
-```sh
-$ npm install -g socket.io
-```
-
-```sh
-$ npm install supervisor -g
-```
-
-```sh
-$ npm install body-parser
-```
-
-```sh
-$ npm install mongoose
-```
-
-```sh
 $ npm start
 ```
+
+## Open Website(Heroku Link)
+https://movieadda.herokuapp.com/#/
 
